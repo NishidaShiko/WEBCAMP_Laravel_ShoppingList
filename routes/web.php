@@ -28,7 +28,7 @@ Route::post('/login', [AuthController::class, 'login']);
 // 会員登録
 Route::prefix('/user')->group(function () {
     Route::get('/register', [UserController::class, 'index'])->name('front.user.register');
-    Route::post('/register', [UserController::class, 'register'])->name('front.user.register.post');
+    Route::post('/index', [UserController::class, 'register'])->name('front.user.register.post');
 });
 // 認可処理
 Route::middleware(['auth'])->group(function () {
