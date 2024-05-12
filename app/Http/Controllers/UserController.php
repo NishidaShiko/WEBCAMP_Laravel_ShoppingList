@@ -12,12 +12,12 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     // ユーザー登録ページ
-        public function register()
+        public function index()
     {
         return view('user/register');
     }
     // 登録する
-    public function index(UserRegisterPost $request)
+    public function register(UserRegisterPost $request)
     {
         // データの取得
         $datum = $request->validated();
